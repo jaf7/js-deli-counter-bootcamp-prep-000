@@ -16,10 +16,10 @@ function currentLine( katzDeliLine ) {
   if ( katzDeliLine.length === 0 ) {
     return "The line is currently empty.";
   } else {
-    var currentLineString = `The line is currently: `;
+    var formattedNames = [];
     for ( let i = 0; i < katzDeliLine.length; i++ ) {
-      currentLineString += `${i+1}. ${katzDeliLine[i]}, `
+      formattedNames.push( `${i+1}. ${katzDeliLine[i]}`)
     }
-    return currentLineString;
+    return `The line is currently: ` + formattedNames.join(', ');
   }
 }
